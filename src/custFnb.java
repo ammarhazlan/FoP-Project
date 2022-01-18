@@ -34,7 +34,7 @@ public class custFnb extends javax.swing.JFrame {
         initComponents();
         show_fnb();
     }
-    
+    //array to get data from database
     public ArrayList<fnbcust> custfnblist(){
         ArrayList<fnbcust> custfnblist = new ArrayList<>();
          try
@@ -53,7 +53,7 @@ public class custFnb extends javax.swing.JFrame {
         }
          return custfnblist;
         }
-        
+        //table to show data
         public void show_fnb(){
         ArrayList<fnbcust> list = custfnblist();
         DefaultTableModel model =(DefaultTableModel) fnbtable.getModel();
@@ -165,7 +165,7 @@ public class custFnb extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+        // done button
         dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
@@ -214,6 +214,7 @@ public class custFnb extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator1;
     // End of variables declaration//GEN-END:variables
 }
+//receive and pass data
 class fnbcust{
     private String name,id,price;
     

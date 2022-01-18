@@ -39,7 +39,7 @@ public class customerBooking extends javax.swing.JFrame{
         initComponents();
         updateCombo();
     }
-    
+    //data in combobox
     private void updateCombo() {
         
         try
@@ -324,7 +324,7 @@ public class customerBooking extends javax.swing.JFrame{
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    //combobox for date
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         String moviename = jComboBox1.getSelectedItem().toString();
         try
@@ -343,7 +343,7 @@ public class customerBooking extends javax.swing.JFrame{
             JOptionPane.showMessageDialog(null,ex);
         }
     }//GEN-LAST:event_jComboBox1ActionPerformed
-
+    //combobox for time
     private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
         String hallclass = jComboBox3.getSelectedItem().toString();
         String moviename = jComboBox1.getSelectedItem().toString();
@@ -363,7 +363,7 @@ public class customerBooking extends javax.swing.JFrame{
             JOptionPane.showMessageDialog(null,ex);
         }
     }//GEN-LAST:event_jComboBox3ActionPerformed
-
+    //combobox for hall class
     private void jComboBox5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox5ActionPerformed
         String date = jComboBox5.getSelectedItem().toString();
         String moviename = jComboBox1.getSelectedItem().toString();
@@ -383,7 +383,7 @@ public class customerBooking extends javax.swing.JFrame{
             JOptionPane.showMessageDialog(null,ex);
         }
     }//GEN-LAST:event_jComboBox5ActionPerformed
-
+    //combobox for seat
     private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
         String time = jComboBox2.getSelectedItem().toString();
         String moviename = jComboBox1.getSelectedItem().toString();
@@ -409,18 +409,18 @@ public class customerBooking extends javax.swing.JFrame{
     }//GEN-LAST:event_jComboBox4ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        // back button
         this.hide();
         customerHomePage hpage = new customerHomePage();
         hpage.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+        // show seat plan in hall
         custSeats seats = new custSeats();
         seats.show();
     }//GEN-LAST:event_jButton3ActionPerformed
-
+    //insert into database
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         String seat=jTextField1.getText().toUpperCase();
         String[] value=seat.split(",");
@@ -446,14 +446,14 @@ public class customerBooking extends javax.swing.JFrame{
             pst.executeUpdate();
         }catch (ClassNotFoundException | SQLException e){
         }
-        /*try{
+        //delete seat after booked
+        try{
             Class.forName("com.mysql.jdbc.Driver");
             sqlConn = DriverManager.getConnection(dataConn,username,password);
-            pst = sqlConn.prepareStatement("delete from connector.seats where seatsname='"+a+"'");
+            pst = sqlConn.prepareStatement("delete from connector.seats where seatsname='"+value[i]+"'");
             pst.executeUpdate();
         }catch(ClassNotFoundException | SQLException e){ 
-        }*/
-        
+        }
         }
         
         JOptionPane.showMessageDialog(this, "Booking Succesfull");
@@ -463,7 +463,7 @@ public class customerBooking extends javax.swing.JFrame{
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
+        // show menu
         custFnb fnb = new custFnb();
         fnb.show();
     }//GEN-LAST:event_jButton5ActionPerformed

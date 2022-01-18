@@ -141,25 +141,25 @@ public class staffHomePage extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    //open page to edit movie
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         dispose();
         Staffmovie addmovie = new Staffmovie();
         addmovie.show();
     }//GEN-LAST:event_jButton1ActionPerformed
-
+    //open page to edit fnb
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         dispose();
         Stafffnb addfnb = new Stafffnb();
         addfnb.show();
     }//GEN-LAST:event_jButton4ActionPerformed
-
+    //open page to edit seats
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         dispose();
         Staffseats seats = new Staffseats();
         seats.show();
     }//GEN-LAST:event_jButton2ActionPerformed
-
+    //open page to set screening
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         dispose();
         Staffscreening screen = new Staffscreening();

@@ -30,9 +30,9 @@ public class customerPayment extends javax.swing.JFrame {
     
     String movie,time,custname,fnb,hallclass,seat;
     float total,totalfood=0,totalseat=0;
-    public customerPayment() {
-        
+    public customerPayment() { 
     }
+    //received info from other file
     public customerPayment(String movie,String time,String custname,String fnb,String hallclass,String seat){
         initComponents();
         this.movie=movie;
@@ -44,6 +44,7 @@ public class customerPayment extends javax.swing.JFrame {
         String[] valuefnb=fnb.split(",");
         
         for(int i=0;i<valuefnb.length;i++){
+            //get fnb price from database
         try
         {
             Class.forName("com.mysql.jdbc.Driver");
@@ -60,7 +61,7 @@ public class customerPayment extends javax.swing.JFrame {
         }catch (ClassNotFoundException | SQLException ex){
             JOptionPane.showMessageDialog(null,ex);
         }
-    }
+    }    //get hall price from database
         try
         {
             Class.forName("com.mysql.jdbc.Driver");
@@ -80,6 +81,7 @@ public class customerPayment extends javax.swing.JFrame {
         total=totalfood+totalseat;
         jLabel11.setText(Float.toString(total));
     }
+    //send info to other file, close this file and open other file
     public void sendinfo(){
         customerSummary send = new customerSummary(movie,time,seat);
         dispose();

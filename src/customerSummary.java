@@ -30,7 +30,7 @@ public class customerSummary extends javax.swing.JFrame {
     
     public customerSummary(){
     }
-    
+    //receive info from other file and display summary order
     public customerSummary(String moviename,String timestart,String seat) {
         initComponents();
         jLabel7.setText(seat);

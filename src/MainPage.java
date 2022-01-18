@@ -177,6 +177,7 @@ public class MainPage extends javax.swing.JFrame {
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
                                          
         try{
+            //Open connection to sql
             Class.forName("com.mysql.jdbc.Driver");
             sqlConn = DriverManager.getConnection(dataConn,username,password);
             

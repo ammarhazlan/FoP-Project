@@ -37,7 +37,7 @@ public class customerHomePage extends javax.swing.JFrame {
         show_movie();
         this.customerName=custname;
     }
-    
+    //array to store data from database
     public ArrayList<movie> movielist(){
         ArrayList<movie> movielist = new ArrayList<>();
          try
@@ -57,7 +57,7 @@ public class customerHomePage extends javax.swing.JFrame {
         }
          return movielist;
     }
-        
+    //show data in table    
     public void show_movie(){
         ArrayList<movie> list = movielist();
         DefaultTableModel model =(DefaultTableModel) movietable.getModel();
@@ -70,6 +70,7 @@ public class customerHomePage extends javax.swing.JFrame {
             model.addRow(row);
         }
     }
+    //to close this page, send data to other file, and open other page
     public void send(){
         dispose();
         customerBooking book = new customerBooking(customerName);

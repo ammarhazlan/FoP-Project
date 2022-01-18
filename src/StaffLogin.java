@@ -163,6 +163,7 @@ public class StaffLogin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
+        //go to new staff login page
         dispose();
         newStaffLogin newstaff = new newStaffLogin();
         newstaff.show();
@@ -204,7 +205,7 @@ public class StaffLogin extends javax.swing.JFrame {
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        // Back button to main page
         this.hide();
         MainPage mainpg = new MainPage();
         mainpg.setVisible(true);
